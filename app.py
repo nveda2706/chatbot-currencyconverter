@@ -24,7 +24,7 @@ def index():
     return jsonify(response)
 
 def fetch_conversion_factor(source,target):
-    url="https://v6.exchangerate-api.com/v6/{API_KEY}/latest/{}".format(source)
+    url=f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/{source}"
     response = requests.get(url)
     data = response.json()
     
